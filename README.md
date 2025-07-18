@@ -11,11 +11,11 @@ A sleek and responsive Weather App built with **HTML**, **CSS (Bootstrap)**, and
 
 | Desktop Landing | Mobile Landing |
 |-----------------|----------------|
-| ![Desktop Landing](./screenshots/desktopLandingPage.png) | ![Mobile Landing](./screenshots/mobileLandingPage.png) |
+| ![Desktop Landing](./screenshot/desktopLandingPage.png) | ![Mobile Landing](./screenshot/mobileLandingPage.png) |
 
 | Full Desktop View | Full Mobile View |
 |-------------------|------------------|
-| ![Desktop Full](./screenshots/desktopFullScreenshot.png) | ![Mobile Full](./assets/mobileFullScreenshot.png) |
+| ![Desktop Full](./screenshot/desktopFullScreenshot.png) | ![Mobile Full](./screenshot/mobileFullScreenshot.png) |
 
 ---
 
