@@ -1,0 +1,212 @@
+body {
+  background-color: #212529;
+}
+
+/* *{
+  box-sizing: border-box;
+} */
+
+/* /* Make input blend with dark navbar */
+.navbar-dark .form-control {
+  background-color: #212529;
+  /* Matches Bootstrap's dark background */
+  color: white;
+  border: 1px solid #444;
+  /* Optional subtle border */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  /* subtle inner shadow */
+}
+
+/* Placeholder text color */
+.navbar-dark .form-control::placeholder {
+  color: #bbb;
+  /* Light gray placeholder */
+}
+
+/* On focus */
+.navbar-dark .form-control:focus {
+  background-color: #212529;
+  color: white;
+  border-color: #0d6efd;
+  /* Optional highlight on focus */
+  box-shadow: none;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+  /* glowing blue shadow */
+  outline: none;
+}
+
+/* Input focus glow */
+.navbar-dark .form-control:focus {
+  background-color: #212529;
+  color: white;
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+  outline: none;
+}
+
+/* Dropdown menu background and text */
+.dropdown-menu {
+  background-color: #212529;
+  border: 1px solid #444;
+}
+
+/* Dropdown links style */
+.dropdown-menu .dropdown-item {
+  color: #bbb;
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effect on dropdown items */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: white;
+  background-color: #2b3035;
+}
+
+.dropdown-menu .dropdown-item:active {
+  background-color: #0d6efd;
+}
+
+
+/* weather app font desktop */
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+/* only needed in desktop */
+
+
+.main {
+  margin: 4rem 14rem;
+}
+
+/* for boxes color */
+
+.card-header {
+  background-color: #272b2f;
+  border-bottom: 1px solid #ffffff26;
+  color: white;
+}
+
+.card-body {
+  background-color: #212529;
+  color: white;
+}
+
+.text-body-secondary {
+  color: #bbb !important;
+}
+
+.card {
+  background-color: #ffffff26;
+  border: 1px solid #ffffff26;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* for heading  */
+
+.heading {
+  color: white;
+  text-align: center;
+  align-self: center;
+  margin: 3rem 0rem;
+}
+
+
+/* for h2 in second section  */
+
+.display-6 {
+  color: white;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+.table-responsive {
+  margin: 2rem 0;
+}
+
+/* to change color from white to the background color of table td and th  */
+
+.table {
+  border-color: #444;
+}
+
+.table th {
+  background-color: #212529;
+  color: white;
+  font-weight: 400;
+}
+
+.table td {
+  background-color: #212529;
+  color: white;
+
+}
+
+/* for foooter  */
+
+footer p {
+  color: white;
+  text-align: center;
+  align-self: center;
+}
+
+/* for table th width top part  */
+
+.first-th {
+  width: 18%;
+}
+
+.second-th {
+  width: 20%;
+}
+
+.third-th {
+  width: 38%;
+}
+
+.fourth-th {
+  width: 38%;
+}
+
+
+/* for border */
+
+/* .navbar{
+  border: 2px solid red;
+}
+
+.main{
+  border: 2px solid green;
+}
+
+footer{
+  border: 2px solid purple;
+}
+
+.navbar-brand{
+  border: 2px solid blue;
+}
+
+.offcanvas-body{
+  border: 2px solid yellow;
+}
+
+.heading{
+  border: 2px solid cyan;
+}
+
+.col{
+  border: 2px solid violet;
+}
+
+.display-6{
+  border: 2px solid gold;
+}
+
+.table-responsive{
+  border: 2px solid royalblue;
+} */
+

@@ -1,0 +1,39 @@
+@media (max-width:1200px) {
+    .main{
+        margin: 0;
+    }
+
+    .col{
+        width: 90%;
+        margin: auto;
+    }
+
+    .btn{
+        font-size: 1rem;
+    }
+
+    .main{
+        margin: 0rem 1rem;
+    }
+
+    .navbar-brand{
+        font-size: 1.7rem;
+    }
+
+    
+}
+
+@media (min-width:768px) and (max-width:992px){
+    .col{
+        width: 50%;
+    }
+}
+
+
+@media (min-width:991px) and (max-width:1200px){
+    .col{
+        width: 33.33333333%;
+    }
+}
+
+

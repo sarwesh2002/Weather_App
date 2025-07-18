@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css">
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      aria-label="Offcanvas navbar large"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Weather App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Weather App</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  User Guide
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">How to Search a City</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Using Your Current Location</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Features of This App</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form
+              class="d-flex mt-3 mt-lg-0"
+              role="search"
+              onsubmit="getWeather(event)"
+            >
+              <input
+                class="form-control me-2"
+                id="cityInput"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                autocomplete="off"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main">
+      <main>
+        <div class="heading">
+          <h1 id="cityTitle">Weather for</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temperature</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="Temp_Main"></span
+                  ><small class="text-body-secondary fw-light">/°C</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Actual - <span id="Temp_Actual"></span></li>
+                  <li>Feels Like - <span id="Temp_FeelsLike"></span></li>
+                  <li>Min - <span id="Temp_Min"></span></li>
+                  <li>Max - <span id="Temp_Max"></span></li>
+                </ul>
+                <button
+                  type="button"
+                  class="w-100 btn btn-lg btn-outline-primary"
+                >
+                  Check Temperature Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title" T>
+                  <span id="Humidity_Main"></span
+                  ><small class="text-body-secondary fw-light">%</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Current - <span id="Humidity_Current"></span></li>
+                  <li>Comfort - <span id="Humidity_Comfort"></span></li>
+                  <li>Dew Point - <span id="Humidity_DewPoint"></span></li>
+                  <li>Index - <span id="Humidity_Index"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">
+                  Understand Humidity
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="Wind_Main"></span
+                  ><small class="text-body-secondary fw-light"> km/hr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Speed - <span id="Wind_Speed"></span></li>
+                  <li>Direction - <span id="Wind_Direction"></span></li>
+                  <li>Gust - <span id="Wind_Gust"></span></li>
+                  <li>Chill - <span id="Wind_Chill"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">
+                  Learn About Wind Speed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="display-6 text-center mb-4">
+          Weather of other popular cites
+        </h2>
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr class="table-top-th">
+                <th class="first-th"></th>
+                <th class="second-th">Temp</th>
+                <th class="third-th">Humidity</th>
+                <th class="fourth-th">Wind_Speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Tokyo</th>
+                <td id="tokyo_temp"></td>
+                <td id="tokyo_humidity"></td>
+                <td id="tokyo_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Bangkok</th>
+                <td id="bangkok_temp"></td>
+                <td id="bangkok_humidity"></td>
+                <td id="bangkok_wind"></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">New York</th>
+                <td id="newyork_temp"></td>
+                <td id="newyork_humidity"></td>
+                <td id="newyork_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">London</th>
+                <td id="london_temp"></td>
+                <td id="london_humidity"></td>
+                <td id="london_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Osaka</th>
+                <td id="osaka_temp"></td>
+                <td id="osaka_humidity"></td>
+                <td id="osaka_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Shanghai</th>
+                <td id="shanghai_temp"></td>
+                <td id="shanghai_humidity"></td>
+                <td id="shanghai_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Istanbul</th>
+                <td id="istanbul_temp"></td>
+                <td id="istanbul_humidity"></td>
+                <td id="istanbul_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Paris</th>
+                <td id="paris_temp"></td>
+                <td id="paris_humidity"></td>
+                <td id="paris_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Beijing</th>
+                <td id="beijing_temp"></td>
+                <td id="beijing_humidity"></td>
+                <td id="beijing_wind"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td id="mumbai_temp"></td>
+                <td id="mumbai_humidity"></td>
+                <td id="mumbai_wind"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </section>
+
+    <footer>
+      <p>Copyright © 2025 Sarwesh Sain. All Rights Reserved.</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      window.onload = () => {
+        getWeather(null, "New Delhi");
+        loadPopularCitiesWeather()
+      };
+    </script>
+  </body>
+</html>
