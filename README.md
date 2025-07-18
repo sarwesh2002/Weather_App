@@ -21,10 +21,7 @@ A sleek and responsive Weather App built with **HTML**, **CSS (Bootstrap)**, and
 
 ## 🎥 Demo Video
 
-https://user-images.githubusercontent.com/your-user-id/demo-video.mp4
-<!-- Or if you converted it to GIF:
-![Demo](./assets/demo-video.gif)
--->
+▶️ [Click here to watch the demo video](./video/weatherApp-demo.mp4)  
 
 ---
 
