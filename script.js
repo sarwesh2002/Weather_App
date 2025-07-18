@@ -14,7 +14,7 @@ async function getWeather(e, cityname) {
   const city = cityname || document.getElementById("cityInput").value.trim();
   if (!city) return alert("Please enter a city name");
 
-  const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(
+  const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(
     city
   )}&aqi=yes`;
 
@@ -107,7 +107,7 @@ function updateCityRow(city, data) {
 
 async function loadPopularCitiesWeather() {
   for (const city of popularCities) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(
       city
     )}&aqi=yes`;
   
