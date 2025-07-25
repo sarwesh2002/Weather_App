@@ -58,7 +58,7 @@ Use Live Server in VS Code
 This project uses a free demo API key from WeatherAPI.
 If you're using it in production, replace it in script.js:
 
-const apiKey = "d94becc406184c2aa1981224251607";
+const apiKey = "YOUR_API_KEY_HERE";
 
 🙋‍♂️ Author
 Sarwesh
