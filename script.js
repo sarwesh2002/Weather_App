@@ -1,6 +1,6 @@
 // this code will fetch weather data of cities
 
-const API_KEY = "d94becc406184c2aa1981224251607";
+const API_KEY = "a826d50a48354e9c858163115252008";
 
 function getComfortLevel(humidity) {
   if (humidity < 30) return "Dry";
@@ -124,3 +124,4 @@ async function loadPopularCitiesWeather() {
   }
   }
 }
+
